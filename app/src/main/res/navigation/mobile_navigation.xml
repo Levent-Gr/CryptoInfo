@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.leventgorgu.cryptoinfo.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_cryptoDetailFragment"
+            app:destination="@id/cryptoDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favorites"
+        android:name="com.leventgorgu.cryptoinfo.ui.favorites.FavoritesFragment"
+        android:label="@string/title_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_navigation_favorites_to_cryptoDetailFragment"
+            app:destination="@id/cryptoDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cryptoDetailFragment"
+        android:name="com.leventgorgu.cryptoinfo.ui.cryptodetail.CryptoDetailFragment"
+        android:label="CryptoDetailFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_cryptoDetailFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <argument
+            android:name="symbol"
+            app:argType="string"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/action_cryptoDetailFragment_to_navigation_favorites"
+            app:destination="@id/navigation_favorites" />
+        <argument
+            android:name="favorite"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.leventgorgu.cryptoinfo.ui.first.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>
