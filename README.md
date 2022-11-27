@@ -23,6 +23,9 @@ This is Cypper app.You can add the cryptocurrencies yo want to fallow closely to
 - Room Testing
 - Coroutines Test
 
+### Google Play Link
+https://play.google.com/store/apps/details?id=com.leventgorgu.cryptoinfo&hl=tr&gl=US
+
 
 ## Logo
 ![Logo](https://raw.githubusercontent.com/Levent-Gr/CryptoInfo/master/screenShots/logo/kapakCypper.png)
