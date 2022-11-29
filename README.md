@@ -23,6 +23,12 @@ This is Cypper app.You can add the cryptocurrencies yo want to fallow closely to
 - Room Testing
 - Coroutines Test
 
+### UI/UX Designer
+#### Behance
+https://www.behance.net/sercanbarisguldez
+#### Linkedin
+https://www.linkedin.com/in/sercanbarisguldez/
+
 ### Google Play Link
 https://play.google.com/store/apps/details?id=com.leventgorgu.cryptoinfo&hl=tr&gl=US
 
