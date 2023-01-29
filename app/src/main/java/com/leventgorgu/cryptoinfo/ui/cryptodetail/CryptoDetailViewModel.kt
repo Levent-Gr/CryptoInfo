@@ -13,6 +13,7 @@ import com.leventgorgu.cryptoinfo.roomdb.CryptoEntity
 import com.leventgorgu.cryptoinfo.roomdb.CryptoFavoriteEntity
 import com.leventgorgu.cryptoinfo.util.APIResult
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -28,9 +29,12 @@ class CryptoDetailViewModel @Inject constructor(private val cryptoRepository: Cr
     private val _selectedCryptoDetail = MutableLiveData<CryptoEntity>()
     val selectedCryptoDetail: LiveData<CryptoEntity> = _selectedCryptoDetail
 
+    private val handler = CoroutineExceptionHandler { _, exception ->
+        println("CoroutineExceptionHandler got $exception")
+    }
 
     fun getCryptoDetails(cryptoId:Int){
-        viewModelScope.launch {
+        viewModelScope.launch(handler) {
             val data = cryptoRepository.getCryptoWithId(cryptoId)
             data.let {
                 _selectedCryptoDetail.value = it
@@ -39,19 +43,19 @@ class CryptoDetailViewModel @Inject constructor(private val cryptoRepository: Cr
     }
 
     fun getCryptoDetailEntity(cryptoDetailId:Int){
-        viewModelScope.launch {
+        viewModelScope.launch(handler) {
             _cryptoDetailEntity.value = cryptoRepository.getCryptoDetailEntity(cryptoDetailId)
         }
     }
 
     fun getCryptoInfoFromAPI(symbol:String){
-        viewModelScope.launch {
+        viewModelScope.launch(handler) {
             _cryptoInfo.value = cryptoRepository.getCryptoInfoDataFromAPI(symbol)
         }
     }
 
     fun insertSelectedCryptoDetail(cryptoDetailEntity: CryptoDetailEntity){
-        viewModelScope.launch {
+        viewModelScope.launch(handler) {
             cryptoRepository.insertCryptoDetail(cryptoDetailEntity)
         }
     }
@@ -60,7 +64,7 @@ class CryptoDetailViewModel @Inject constructor(private val cryptoRepository: Cr
 
         var result : APIResult<CryptoFavoriteEntity> = APIResult.loading(cryptoFavoriteEntity)
         if (cryptoFavoriteEntity.id!=0){
-            viewModelScope.launch {
+            viewModelScope.launch(handler) {
                 result = APIResult.success(cryptoFavoriteEntity)
                 cryptoRepository.insertCryptoFavorite(cryptoFavoriteEntity)
             }
@@ -74,7 +78,7 @@ class CryptoDetailViewModel @Inject constructor(private val cryptoRepository: Cr
 
         var result : APIResult<CryptoFavoriteEntity> = APIResult.loading(cryptoFavoriteEntity)
         if (cryptoFavoriteEntity.id!=0){
-            viewModelScope.launch {
+            viewModelScope.launch(handler) {
                 result = APIResult.success(cryptoFavoriteEntity)
                 cryptoRepository.deleteCryptoFavorite(cryptoFavoriteEntity)
             }

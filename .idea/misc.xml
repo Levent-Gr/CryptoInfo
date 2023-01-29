@@ -13,6 +13,7 @@
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/drawable/button_bg.xml" value="0.183" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/drawable/ic__newspaper_24.xml" value="0.183" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/drawable/ic_bg.xml" value="0.183" />
+        <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/drawable/ic_bg_title_2.xml" value="0.241" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/drawable/ic_bg_title__2.xml" value="0.183" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/drawable/ic_bgbgbg.xml" value="0.183" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.183" />
@@ -65,10 +66,10 @@
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xhdpi/home_crypto_recycler_row.xml" value="0.4" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/favorites_crypto_recycler_row.xml" value="0.4" />
-        <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/fragment_crypto_detail.xml" value="0.152" />
+        <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/fragment_crypto_detail.xml" value="0.21933621933621933" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/fragment_favorites.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/fragment_first.xml" value="0.2" />
-        <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/fragment_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxhdpi/home_crypto_recycler_row.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxxhdpi/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/leven/AndroidStudioProjects/CryptoInfo/app/src/main/res/layout-xxxhdpi/favorites_crypto_recycler_row.xml" value="0.25416666666666665" />

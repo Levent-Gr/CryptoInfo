@@ -1,6 +1,7 @@
 package com.leventgorgu.cryptoinfo.util
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable

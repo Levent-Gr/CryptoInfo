@@ -4,24 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.SearchView
 import android.widget.SearchView.OnQueryTextListener
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.leventgorgu.cryptoinfo.adapter.CryptoRecyclerAdapter
 import com.leventgorgu.cryptoinfo.databinding.FragmentHomeBinding
-import com.leventgorgu.cryptoinfo.model.cryptos.Data
-import com.leventgorgu.cryptoinfo.roomdb.CryptoEntity
 import com.leventgorgu.cryptoinfo.roomdb.CryptoFavoriteEntity
 import com.leventgorgu.cryptoinfo.util.Status
 import com.leventgorgu.cryptoinfo.util.Util.LIMIT
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import java.text.DecimalFormat
 
 @ExperimentalCoroutinesApi
 @AndroidEntryPoint
@@ -33,27 +28,25 @@ class HomeFragment : Fragment() {
     private var cryptoRecyclerAdapter = CryptoRecyclerAdapter(arrayListOf())
     private var cryptoFavoriteEntity = ArrayList<CryptoFavoriteEntity>()
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-        //homeViewModel.getCryptosFromAPI("100")
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        homeViewModel.getCryptosData()
         subscribeObserve()
     }
 
     override fun onResume() {
         super.onResume()
+
+        homeViewModel.refreshData()
+
         binding.cryptoRecyclerView.layoutManager = GridLayoutManager(context,2,GridLayoutManager.VERTICAL,false)
         binding.cryptoRecyclerView.adapter = cryptoRecyclerAdapter
 

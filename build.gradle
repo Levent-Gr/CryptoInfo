@@ -12,8 +12,12 @@ buildscript {
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
         classpath "com.google.dagger:hilt-android-gradle-plugin:2.42"
         classpath 'com.android.tools.build:gradle:3.5.4'
+        classpath 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
     }
 }
+
+
 
 
 
